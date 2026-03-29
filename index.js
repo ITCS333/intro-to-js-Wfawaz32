@@ -41,9 +41,9 @@ function isPalindrome(str) {
  */
 function findAverage(numbers) {
     if (numbers.length === 0) return null;
-    const sum = numbers.reduce((acc, num) => acc + num, 0);
-    return sum / numbers.length;
+    const total = numbers.reduce((acc, num) => acc + num, 0);
+    return total / numbers.length;
 }
 
-// ✅ لا تغيّر أسماء الدوال هنا
+// Export all functions together
 module.exports = { sum, reverseString, findLargest, isPalindrome, findAverage };
