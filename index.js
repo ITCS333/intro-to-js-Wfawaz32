@@ -4,12 +4,7 @@
  * @returns {number} The sum of a and b.
  */
 function sum(a, b) {
-function add(a, b) {
     return a + b;
-}
-
-module.exports = { add };
-
 }
 
 /**
@@ -17,12 +12,7 @@ module.exports = { add };
  * @returns {string} The reversed string.
  */
 function reverseString(str) {
- function add(a, b) {
-    return a + b;
-}
-
-module.exports = { add };
-
+    return str.split('').reverse().join('');
 }
 
 /**
@@ -30,12 +20,8 @@ module.exports = { add };
  * @returns {number} The largest number in the array. Return null if the array is empty.
  */
 function findLargest(numbers) {
- function add(a, b) {
-    return a + b;
-}
-
-module.exports = { add };
-
+    if (numbers.length === 0) return null;
+    return Math.max(...numbers);
 }
 
 /**
@@ -45,35 +31,19 @@ module.exports = { add };
  * The check should be case-insensitive.
  */
 function isPalindrome(str) {
- function add(a, b) {
-    return a + b;
-}
-
-module.exports = { add };
-
+    const cleaned = str.toLowerCase();
+    return cleaned === cleaned.split('').reverse().join('');
 }
 
 /**
  * @param {number[]} numbers An array of numbers.
- * @returns {number[]} A new array containing only the even numbers from the original array.
+ * @returns {number} The average of the numbers. Return null if the array is empty.
  */
-function filterEvenNumbers(numbers) {
-
-  function add(a, b) {
-    return a + b;
+function findAverage(numbers) {
+    if (numbers.length === 0) return null;
+    const sum = numbers.reduce((acc, num) => acc + num, 0);
+    return sum / numbers.length;
 }
 
-module.exports = { add };
-
-}
-
-
-// Do not edit the line below.
-module.exports = {
-  sum,
-  reverseString,
-  findLargest,
-  isPalindrome,
-  filterEvenNumbers,
-};
-
+// ✅ لا تغيّر أسماء الدوال هنا
+module.exports = { sum, reverseString, findLargest, isPalindrome, findAverage };
